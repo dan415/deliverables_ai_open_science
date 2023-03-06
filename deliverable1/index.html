@@ -121,6 +121,10 @@ docker pull danicabrera/delivery1:latest
 </code></pre>
 <h1>Usage</h1>
 
+<p>Move files to be analyzed to the input_files folder.</p>
+<p>If using docker:
+    ./input_files and ./output_files are expected to be used as the folders
+    for the input and output files, respectively.</p>
 <h2>From source</h2>
 
 <pre><code>docker run -t --rm -p 8070:8070 lfoppiano/grobid:0.7.2 &amp;
