@@ -1,5 +1,5 @@
-site_name: My Documentation Site
-site_url: https://docs.example.com/
+site_name: Deliverables AI Open Science
+site_url: https://deliverables-ai-open-science.readthedocs.io/
 site_description: This is a description of my documentation site.
 
 theme:
