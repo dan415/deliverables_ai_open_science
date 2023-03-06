@@ -50,6 +50,12 @@ Ubuntu 22.04
 
 <h1>Usage</h1>
 
+Move files to be analyzed to the input_files folder.
+
+If using docker:
+    ./input_files and ./output_files are expected to be used as the folders
+    for the input and output files, respectively.
+
 <h2>From source</h2>
 
     docker run -t --rm -p 8070:8070 lfoppiano/grobid:0.7.2 &
