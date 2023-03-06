@@ -14,7 +14,7 @@ permissions:
 
 jobs:
     grobid:
-        name: Compile site assets
+        name: Grobid
         runs-on: ubuntu-latest
         steps:
           - name: Check out the repo
@@ -24,7 +24,13 @@ jobs:
             with:
                 image: lfoppiano/grobid:0.7.2
                 options: -p 8070:8070
-                run: |   
+                run: |
+                    cd /opt/grobid
+                    EXPORT PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH
+                    EXPORT JAVA_HOME=/usr/local/openjdk-11
+                    EXPORT LANG=C.UTF-8
+                    EXPORT JAVA_VERSION=11.0.16
+                    EXPORT TINI_VERSION=v0.18.0
                     /tini -s -- ./grobid-service/bin/grobid-service
     pdfanalyzer:
       runs-on: ubuntu-latest
