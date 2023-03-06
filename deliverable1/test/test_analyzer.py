@@ -8,9 +8,17 @@ from deliverable1.src import pdf_analysis
 class MyTestCase(unittest.TestCase):
 
     def check_correct_num_outputs(self, outputdir):
+        '''
+        Given an output directory, returns the number of files in the directory
+        :param outputdir: file path to the output directory
+        :return: number of files in the output directory
+        '''
         return len(os.listdir(outputdir))
 
     def test_01_blank_pdf(self):
+        '''
+        Test that the correct number of output files are produced given a blank pdf
+        '''
         outputdir = "deliverable1/test/cases/output"
         if not os.path.exists(outputdir):
             os.mkdir(outputdir, 0o777)
@@ -24,6 +32,9 @@ class MyTestCase(unittest.TestCase):
         self.assertFalse(os.path.exists(outputdir + "/wordcloud.png"))
 
     def test_02_correct_num_papers(self):
+        '''
+        Test that the correct number of output files are produced given valid pdfs
+        '''
         outputdir = "deliverable1/test/cases/output"
         if not os.path.exists(outputdir):
             os.mkdir(outputdir, 0o777)
@@ -34,6 +45,9 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(7, self.check_correct_num_outputs(outputdir))
 
     def test_03_correct_num_figures(self):
+        '''
+        Test that the total correct number of figures are extracted from the pdfs
+        '''
         outputdir = "deliverable1/test/cases/output"
         if not os.path.exists(outputdir):
             os.mkdir(outputdir, 0o777)
@@ -47,6 +61,9 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(total_figures, 25)
 
     def test_03_correct_num_links(self):
+        '''
+        Test that the correct number of links are extracted from the pdfs
+        '''
         outputdir = "deliverable1/test/cases/output"
         if not os.path.exists(outputdir):
             os.mkdir(outputdir, 0o777)
