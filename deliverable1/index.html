@@ -117,7 +117,7 @@ docker pull lfoppiano/grobid:0.7.2
 <h2>Using docker</h2>
 
 <pre><code>docker pull lfoppiano/grobid:0.7.2
-docker pull lfoppiano/grobid:0.7.2
+docker pull danicabrera/delivery1:latest
 </code></pre>
 <h1>Usage</h1>
 
@@ -135,6 +135,13 @@ python src/pdf_analysis.py
 <p>None of them are required arguments. By default, these are set as ./input_files, ./output_files, ./config.json, respectively</p>
 <h2>Using Docker</h2>
 
+<p>Note: if you want to build the docker image from source, uncomment on the docker-compose file this line</p>
+<pre><code># build: . # if you want to build the image locally (line 13)
+</code></pre>
+<p>and comment this one: </p>
+<pre><code>image: danicabrera/delivery1:latest (line 14)
+</code></pre>
+<p>Then:</p>
 <pre><code>cd deliverable1
 sudo docker-compose up
 </code></pre>
