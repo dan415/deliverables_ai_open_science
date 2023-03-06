@@ -21,7 +21,8 @@ jobs:
       ports:
         - "8070:8070"
     steps:
-      - run: /tini -s -- ./grobid-service/bin/grobid-service
+      - run: |
+            /tini -s -- ./grobid-service/bin/grobid-service
 
   pdfanalyzer:
     runs-on: ubuntu-latest
