@@ -1,0 +1,14 @@
+version: 2
+
+# Build documentation in the docs/ directory with Sphinx
+sphinx:
+  configuration: docs/source/conf.p
+
+# Use the Read the Docs theme
+theme:
+  sphinx:
+    # The default theme options
+    theme: classic
+    sticky_navigation: true
+    includehidden: true
+    navigation_depth: 3

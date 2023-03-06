@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  grobid:
+    volumes:
+      - ./input_files:/input_files
+      - ./output_files:/output_files
+    image: lfoppiano/grobid:0.7.2
+    ports:
+      - "8070:8070"
+  pdf-analyzer:
+    network_mode: host
+    build: .
+    volumes:
+      - ./input_files:/app/input_files
+      - ./output_files:/app/output_files
+

@@ -1,0 +1,19 @@
+site_name: My Documentation Site
+site_url: https://docs.example.com/
+site_description: This is a description of my documentation site.
+
+theme:
+    name: readthedocs
+use_directory_urls: false
+nav:
+  - Home: README.md
+  - Deliverable 1:
+      - Installation: deliverable1/README.md
+      - Rationale: deliverable1/rationale.md
+      - Tests: deliverable1/test/tests.md
+
+  - About : LICENSE
+
+extra:
+  author: Daniel Cabrera
+  email: daniel.crodriguez@alumnos.upm.es
