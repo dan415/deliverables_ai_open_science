@@ -9,7 +9,7 @@ version: 2
 python:
   version: "3.8"
   install:
-    - requirements: deliverables/requirements.txt
+    - requirements: deliverable1/requirements.txt
 
 # Build documentation in the docs/ directory with MkDocs
 mkdocs:
