@@ -81,7 +81,39 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                
+                <h1> Tests</h1>
+
+<p>The approach is to execute the program changing the input files folder to test for different types of input.</p>
+<p>Metrics can be obtained from the summary.json file to check if the program is working correctly.</p>
+<p>Preconditions:
+    Grobid must be running, dependencies must be installed and environment must be activated.
+    Details on how to do this can be found in the README.md file of deliverable1.</p>
+<h2>Run</h2>
+<p>on folder deliverables_ai_open_science:</p>
+<pre><code>python -m unittest deliverable1.test.test_analyzer
+</code></pre>
+<h2>test_01_blank_pdf</h2>
+
+<p><em>case_01</em></p>
+<p>Run with blank pdf file. </p>
+<p>Should output empty "figures.png", "links.txt" and "summary.json", but no wordcloud.</p>
+<p>Should not produce any exceptions.</p>
+<p>If run with docker-compose, tei file will be generated, else it will not.</p>
+<h2>test_02_correct_num_papers</h2>
+
+<p><em>case_02</em></p>
+<p>Run with 3 valid pdfs.</p>
+<p>Should output 7 files, and produce no exceptions</p>
+<h2>test_03_correct_num_figures</h2>
+
+<p><em>case_03</em></p>
+<p>Run with 4 valid pdfs, total number of figures in summary.json should be 25.</p>
+<p>Should not produce any exceptions.</p>
+<h2>test_03_correct_num_links</h2>
+
+<p><em>case_03</em></p>
+<p>Run with 4 valid pdfs, total number of links in summary.json should be 8.</p>
+<p>Should not produce any exceptions.</p>
               
             </div>
           </div><footer>
