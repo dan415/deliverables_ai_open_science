@@ -46,7 +46,7 @@ Ubuntu 22.04
 <h2>Using docker</h2>
 
     docker pull lfoppiano/grobid:0.7.2
-    docker pull lfoppiano/grobid:0.7.2
+    docker pull danicabrera/delivery1:latest
 
 <h1>Usage</h1>
 
@@ -66,6 +66,16 @@ You can also set the configuration file for the grobid client, needed to process
 None of them are required arguments. By default, these are set as ./input_files, ./output_files, ./config.json, respectively
 
 <h2>Using Docker</h2>
+
+Note: if you want to build the docker image from source, uncomment on the docker-compose file this line
+   
+    # build: . # if you want to build the image locally (line 13)
+
+and comment this one: 
+
+    image: danicabrera/delivery1:latest (line 14)
+
+Then:
 
     cd deliverable1
     sudo docker-compose up

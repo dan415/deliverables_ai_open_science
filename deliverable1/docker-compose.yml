@@ -10,7 +10,8 @@ services:
       - "8070:8070"
   pdf-analyzer:
     network_mode: host
-    build: .
+    # build: . # if you want to build the image locally
+    image: danicabrera/delivery1:latest
     volumes:
       - ./input_files:/app/input_files
       - ./output_files:/app/output_files
